@@ -1,8 +1,10 @@
 const express = require("express");
+var cors = require("cors");
 const app = express();
 let port = process.env.PORT || 5000;
 
 app.use(express.json());
+app.use(cors());
 
 app.get("/bbtest-auth", (req, res) => {
   res.status(405).json({ error: "GET method not supported." });
