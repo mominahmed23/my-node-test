@@ -13,7 +13,7 @@ app.get("/bbtest-auth", (req, res) => {
 app.post("/bbtest-auth", (req, res) => {
   const { password } = req.body;
   if (password === "abc123") {
-    res.status(200).json({ success: `Login successful at ${Date.now()} .` });
+    res.status(200).json({ success: `Login successful at ${Date.now()}.` });
   } else {
     res.status(400).json({ error: "Incorrect password." });
   }
